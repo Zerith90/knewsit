@@ -26,7 +26,7 @@ $ npm start
 ```
 
 
-![News API](https://newsapi.org/)
+News Source : ![News API](https://newsapi.org/)
 
--Pulls news from curated sources of data
--Auto load news when scrolling
+- Pulls news from curated sources of data
+- Auto load news when scrolling
