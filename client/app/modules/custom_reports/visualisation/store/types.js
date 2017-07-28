@@ -1,0 +1,4 @@
+export const LOADING = 'LOADING';
+export const UPDATE_REPORT_META = 'UPDATE_REPORT_META';
+export const UPDATE_OMEGA = 'UPDATE_OMEGA'
+export const UPDATE_CHART_META = 'UPDATE_CHART_META';

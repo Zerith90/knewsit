@@ -1,0 +1,16 @@
+extends layout
+
+block styles
+	// Site stylesheet
+	link(rel='stylesheet', href='/app/styles/frontend.css')
+
+block content
+	.page
+		h1=t("welcomeTo", app)
+
+	include parts/footer
+
+block scripts
+	script(src='/app/frontend.js')
+	//- script(src='https://unpkg.com/vue-infinite-scroll@2.0.1')
+

@@ -1,0 +1,3 @@
+export const LOAD_NEWS 			= "LOAD_NEWS";
+export const LOAD_SOURCE = "LOAD_SOURCE";
+export const UPDATE_CATEGORIES = "UPDATE_CATEGORIES"

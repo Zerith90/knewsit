@@ -1,0 +1,55 @@
+extends ../layout
+
+block styles
+	// Site stylesheet
+	link(rel="stylesheet" href= "https://fonts.googleapis.com/icon?family=Material+Icons")
+	link(rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css")
+	style.
+		.card{
+			float:none !important;
+			margin:10% auto !important
+		}
+		.input-field:focus label:not(.label-icon) {
+			font-size: .8rem;
+			-webkit-transform: translateY(-140%);
+			transform: translateY(-140%);
+		}
+		.row .col{
+			padding:0 !important
+		}
+		.input-field.col label{
+			left: 0 !important
+		}
+		.x45ty{
+			margin-top:2em
+		}
+		.input-field input:focus, .materialize-textarea:focus:not([readonly]) {
+			border-bottom: 1px solid #3f51b5 !important;
+			box-shadow: 0 1px 0 0 #3f51b5 !important;
+		}
+block content
+	div.row
+		div.card.darken-1.col.s12.m6.l3
+			div.progress.indigo.lighten-4(style="display:none")
+					div.indeterminate.indigo
+			div.card-content
+				div.card-title Sign in
+				p with your T1 Account
+				div.row.x45ty
+					div.input-field.col.s12
+						input(type="text" name="user" id="user")
+						label(for="user") T1 login
+					div.input-field.col.s12
+						input(type="password" name="password" id="password" )
+						label(for="password") Password
+					div.error#authenticationFailed(style="display:none;color:#e53935 ") Authentication Failed. Please try again
+				div.row
+					div.col.s12.m6
+						a(href="https://t1.mediamath.com/app/#index") Forgot Password?
+					div.col.s12.m6(align="right")
+						a.waves-effect.waves-light.indigo.btn#login() Login
+block scripts
+	script(src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")
+	script(defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js")
+	script(src="/public/scripts/login.js")
+					

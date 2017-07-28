@@ -1,0 +1,75 @@
+@import "themes/blurred/variables";
+@import "common/mixins";
+@import "common/base";
+
+//@import "../../node_modules/vue-form-generator/dist/vue-form-generator.css";
+
+@include scrollbars(.5em, $color3-dark, $backgroundColor);
+
+html {
+	position: relative;
+	min-width: $minWidth;
+}
+
+html, body {
+	height: 100%;
+	overflow:hidden;
+	margin: 0 !important;
+	min-width: $minWidth;
+	font: $baseFont
+}
+
+body {
+	// background-color: $backgroundColor;
+	color: $textColor;
+
+	padding: 0;
+	margin: 0;
+	font-weight: 400;
+	font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;	
+
+	@if $glassTheme {
+		// &::before {
+		// 	content: '';
+		// 	position: fixed;
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	top: 0;
+		// 	left: 0;
+		// 	// background-image: $backgroundImage;
+		// 	// background: $backgroundImage no-repeat center center;
+		// 	//background: url($images-root + 'blur-bg.jpg') no-repeat center center;
+		// 	background-size: cover;
+		// 	will-change: transform;
+		// 	z-index: -1;
+		// }
+	}
+
+}
+
+
+img{
+	 display:block;
+}
+
+.app-main {
+	min-height: 100vh;
+	min-width:100vw;
+	    // overflow-y: scroll;
+	// background-color: $backgroundColor;
+	height:100vh;
+	@if $glassTheme {
+		// background-color: rgba($backgroundColor, 0.5);
+	}
+
+	// padding-top: $headerHeight;
+	transition: margin-left .5s ease;
+
+	// padding-left: 10px;
+
+	&.miniSidebar {
+		margin-left: $menuMiniWidth;
+	} // .miniSidebar
+
+} // .app-main
